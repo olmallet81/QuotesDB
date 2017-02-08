@@ -41,10 +41,10 @@ private:
 // parameter constructor, connect to Oanda server
 OandaAPI::OandaAPI(const std::string& environment) 
 {
-   if (environment == std::string("practice")) {
+   if (environment == "practice") {
       this->domain = "https://api-fxpractice.oanda.com";
    }
-   else if (environment == std::string("live")) {
+   else if (environment == "live") {
       this->domain = "https://api-fxtrade.oanda.com"; 
    }
 
