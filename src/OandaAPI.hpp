@@ -142,10 +142,10 @@ void OandaAPI::getHistoData(const std::string& instrument, const std::vector<std
          date = date.substr(0,10) + " " + date.substr(11,8);
          unsigned date_t = string_to_sec(date);
          // the Bar has to verify the following conditions to be recorded:
-         // Bar is not a day off 
+         // Bar is not on a day off 
          // Bar is complete 
          // Bar is not a duplicate of the previous one 
-         // Bar date is equal or after the chosen starting date for downloading data
+         // Bar date is at or after the chosen starting date for downloading data
          if (!is_day_off(utc_to_est(date)) && (obj->getValue<bool>("complete") && prev_date != date && date_t >= start_t)) {
             // adding element
             data.emplace_back(date_t,
