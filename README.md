@@ -32,7 +32,7 @@ int main()
    conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
    // it will then download data for every pair (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
    
-   // you can the update later the database by simply doing:
+   // you can update later all the tables in the database by simply doing:
    //conn.updateAllTabs("QuotesDB");
 
    // connecting to QuotesDB database for reading data
