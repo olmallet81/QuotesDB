@@ -33,7 +33,6 @@ public:
 
 private:
    Poco::Net::HTTPSClientSession *session;    
-   std::string environment;
    std::string domain;
 };
 
@@ -42,7 +41,6 @@ private:
 // parameter constructor, connect to Oanda server
 OandaAPI::OandaAPI(const std::string& environment) 
 {
-   this->environment = environment;
    if (environment == std::string("practice")) {
       this->domain = "https://api-fxpractice.oanda.com";
    }
