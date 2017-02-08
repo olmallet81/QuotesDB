@@ -28,7 +28,7 @@ int main()
    // creating a connection to Oanda server
    qdb::OandaAPI conn("practice");
 
-   // downloading data and recording them to QuotesDB database
+   // downloading data from the 1st of Janurary 2007 and recording them in QuotesDB database
    conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
    // it will then download data for every pair (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
    
