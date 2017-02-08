@@ -2,7 +2,7 @@
 A C++ interface for building your own database of historical market quotes.
 
 # Description
-QuotesDB allows the user to download historical data from [Oanda](http://developer.oanda.com/) using their REST API and record them into a MySQL database. I am not recommending you to use this broker, I choose them only for the purpose of this project as their API is well documented and it is very quick and straightforward to create a demo account allowing the use of this API.
+QuotesDB allows the user to download historical data from [Oanda](http://developer.oanda.com/) using their REST API and record them into a MySQL database. I am not recommending you to use this broker, I choose them only for the purpose of this project as their API is well documented and it is very quick and straightforward to create a demo account allowing you to use of this API.
 
 # How to use it
 
