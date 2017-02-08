@@ -51,7 +51,7 @@ int main()
 
 # Compilation
 
-You will need to link to Poco and MySQL librairies to compile QuotesDB.
+You will need to link to Poco and MySQL libraries to compile QuotesDB.
 ```
 g++ -std=c++11 -O3 -Wall example.cpp -o run -lPocoNet -lPocoNetSSL -lPocoFoundation -lPocoJSON -lmysqlcppconn
 ```
