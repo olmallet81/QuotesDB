@@ -9,13 +9,12 @@ int main()
    // creating a connection to Oanda server
    qdb::OandaAPI conn("practice");
 
-   // downloading data and recording them to QuotesDB database
-   conn.initTab("QuotesDB","EUR_USD","D","2007-01-01 00:00:00");
-   // it will download all daily quotes of EURUSD from the 1st of January 2007
-
-   // or you can do directly
-   //conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
-   // it will then download data for all pairs (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
+   // downloading data from the 1st of Janurary 2007 and recording them in QuotesDB database
+   conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
+   // it will then download data for every pair (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
+   
+   // you can the update later the database by simply doing:
+   //conn.updateAllTabs("QuotesDB");
 
    // connecting to QuotesDB database for reading data
    qdb::DataBase db("QuotesDB");
