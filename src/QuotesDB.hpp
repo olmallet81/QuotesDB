@@ -35,16 +35,16 @@
 // MYSQL parameters 
 static const std::string URL = "tcp://127.0.0.1:3306";
 static const std::string USER = "root";
-static const std::string PASSWORD = "kyokus";
+static const std::string PASSWORD = "password";
 
 // OANDA parameters
-static const std::string ACCOUNT_ID = "1982893";
-static const std::string ACCESS_TOKEN = "009ccad88d21dfed8f4b2bec976f29e1-e99fdb7554482a28a725aa04305a74d5";
+static const std::string ACCOUNT_ID = " ";
+static const std::string ACCESS_TOKEN = " ";
 
 // instruments selected
-static const std::string INSTRUMENTS[] = {"USD_JPY"};
+static const std::string INSTRUMENTS[] = {"EUR_USD","GBP_USD","USD_JPY"};
 // granularities selected
-static const std::string GRANULARITIES[] = {"D"};
+static const std::string GRANULARITIES[] = {"D","H4","H1"};
 
 /*-------------------------------------------------------------------------------------------------*/
 
