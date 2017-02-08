@@ -42,7 +42,7 @@ int main()
 
    // or you can do directly
    conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
-   // it will then download data for all pairs (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
+   // it will then download data for every pair (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
 
    // connecting to QuotesDB database for reading data
    qdb::DataBase db("QuotesDB");
@@ -72,4 +72,5 @@ int main()
 2017-01-24 22:00:00  1.07274  1.07338  1.07691  1.07705  1.07105   1.0712  1.07465  1.07501   28624
 ```
 The columns correspond to the Bar opening date, the open bid and ask, the high bid and ask, the low bid and ask, the close bid and ask and the tick volume.
+
 
