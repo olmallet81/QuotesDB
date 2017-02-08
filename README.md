@@ -18,14 +18,6 @@ You need to create a database in MySQL for recording the downloaded historical d
 
 You will then configurate the header file QuotedDB.hpp with your own parameters for the connection to MySQL database, to Oanda server and the desired instruments and granularities.
 
-# Compilation
-
-You will need to link to Poco and MySQL librairies to compile QuotesDB.
-```
-g++ -std=c++11 -O3 -Wall example.cpp -o run -lPocoNet -lPocoNetSSL -lPocoFoundation -lPocoJSON -lmysqlcppconn
-```
-Poco and MySQL need to be on your compiler path otherwise it will not find the required headers and libraries.
-
 # Example
 
 ```C++
@@ -57,7 +49,16 @@ int main()
 }
 ```
 
-## Ouput
+
+# Compilation
+
+You will need to link to Poco and MySQL librairies to compile QuotesDB.
+```
+g++ -std=c++11 -O3 -Wall example.cpp -o run -lPocoNet -lPocoNetSSL -lPocoFoundation -lPocoJSON -lmysqlcppconn
+```
+Poco and MySQL need to be on your compiler path otherwise it will not find the required headers and libraries.
+
+# Ouput
 
 ```
 2017-02-06 22:00:00  1.07444  1.07544  1.07486  1.07556  1.06555  1.06568  1.06822  1.06837   24736
