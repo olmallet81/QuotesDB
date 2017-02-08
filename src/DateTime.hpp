@@ -21,22 +21,6 @@ inline std::string oanda_to_string(const std::string& date)
 
 /*-------------------------------------------------------------------------------------------------*/
 
-// add minutes to current tm
-inline void add_minutes(tm& d, int nb_minutes) 
-{
-   d.tm_min += nb_minutes;
-}
-
-/*-------------------------------------------------------------------------------------------------*/
-
-// add hours to current tm
-inline void add_hours(tm& d, int nb_hours) 
-{
-   d.tm_hour += nb_hours;
-}
-
-/*-------------------------------------------------------------------------------------------------*/
-
 //convert string date to time structure
 tm string_to_tm(const std::string& date) 
 {
@@ -83,30 +67,6 @@ inline time_t string_to_sec(const std::string& date)
 {
     tm d = string_to_tm(date);
     return timegm(&d);
-}
-
-/*-------------------------------------------------------------------------------------------------*/
-
-// convert string date in format YYYY-mm-dd HH:MM:SS.sss to UTC milliseconds since epoch
-inline uint64_t string_to_millisec(const std::string& date)
-{
-   tm d = string_to_tm(date);
-   time_t t = timegm(&d);
-
-   return 1000*t + std::stoi(date.substr(20,3));
-}
-
-/*-------------------------------------------------------------------------------------------------*/
-
-// convert UTC milliseconds since epoch to date in format YYYY-mm-dd HH:MM:SS.sss
-std::string millisec_to_string(uint64_t millisecs)
-{
-    time_t t = static_cast<time_t>(1e-3 * millisecs);
-    tm *p = gmtime(&t);
-    std::string ms = std::to_string(millisecs);
-    ms = ms.substr(ms.size() - 3, 3);
-
-    return tm_to_string(*p) + "." + ms;
 }
 
 /*-------------------------------------------------------------------------------------------------*/
