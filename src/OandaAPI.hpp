@@ -66,7 +66,7 @@ OandaAPI::OandaAPI(const std::string& environment)
                                                   "ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH");
       // implementing the client-side of an HTTP Secure session
       Poco::URI uri(domain);
-    	session = new Poco::Net::HTTPSClientSession(uri.getHost(),uri.getPort(),context);
+      session = new Poco::Net::HTTPSClientSession(uri.getHost(),uri.getPort(),context);
       // keeping the connection alive
       session->setKeepAlive(true);
    }
