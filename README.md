@@ -41,7 +41,7 @@ int main()
    // it will download all daily quotes of EURUSD from the 1st of January 2007
 
    // or you can do directly
-   //conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
+   conn.initAllTabs("QuotesDB","2007-01-01 00:00:00");
    // it will then download data for all pairs (INSTRUMENT,GRANULARITY) defined in QuotesDB.hpp
 
    // connecting to QuotesDB database for reading data
