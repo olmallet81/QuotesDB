@@ -71,6 +71,6 @@ Poco and MySQL need to be on your compiler path otherwise it will not find the r
 2017-01-25 22:00:00  1.07464   1.0753  1.07649  1.07663  1.06572  1.06586  1.06807  1.06841   30854
 2017-01-24 22:00:00  1.07274  1.07338  1.07691  1.07705  1.07105   1.0712  1.07465  1.07501   28624
 ```
-The columns correspond to the Bar opening date, the open bid and ask, the high bid and ask, the low bid and ask, the close bid and ask and the tick volume.
+The columns correspond to the Bar opening date, the open bid and ask, the high bid and ask, the low bid and ask, the close bid and ask and the tick volume. Note that I chose by the default time zone alignment America/New_York proposed by Oanda but you are free to change it.
 
 
