@@ -4,8 +4,10 @@ A C++ interface for building your own database of historical market quotes.
 # Description
 QuotesDB allows the user to download historical data from [Oanda](http://developer.oanda.com/) using their REST API and record them into a MySQL database. I chose this broker only for the purpose of this project as their API is well documented and it is very quick and straightforward to create a demo account allowing you to use this API. This project is just an example of how it can be done, there is room for improvements and it is still under active development.
 
-# How to use it
+# Why such a project
+When building your own trading system it is essential to have an easy access to a quality database of historical data for initializing your strategies when live trading but also for back-testing your new ideas. Such a database must be easy to refresh for keeping it up to date. I designed QuotesDB in that way, it allows first to initialize the database by creating tables for each desired pair (instrument,granularity), it will download and clean the data by removing duplicate Bars and Bars outside trading activity (week-ends, christmas, new-year). Indeed for small granularities it can unfortunately happen, not getting rid of these Bars could affect back-testing results. Once the database is initialized, QuotesDB can easily be updated, it will read the last recorded Bar date, download the new data (cleaning them and selecting complete Bars only) and append them to the database.
 
+# How to use it
 To use QuotesDB you will need:
 - [POCO C++ library](https://pocoproject.org/)
 - [MySQL Server](https://dev.mysql.com/downloads/mysql/)
