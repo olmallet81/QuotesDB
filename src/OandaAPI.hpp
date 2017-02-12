@@ -103,7 +103,7 @@ void OandaAPI::getHistoData(const std::string& instrument, const std::vector<std
    std::string content;
 
    // getting start date in seconds since epoch
-   unsigned start_t = string_to_sec(parameters[0].substr(6,19));
+   unsigned start_t = string_to_sec(oanda_to_string(parameters[0].substr(6,24)));
 
    try {
       // getting response content
